@@ -9,9 +9,9 @@ WORKDIR $HASURA_ROOT
 
 # Deps
 RUN apt-get update && apt-get install -y libncurses5 git build-essential llvm wget libnuma-dev zlib1g-dev libpq-dev postgresql-client-common postgresql-client libkrb5-dev libssl-dev
-RUN wget https://downloads.haskell.org/~ghc/8.10.1/ghc-8.10.1-aarch64-deb9-linux.tar.xz && \
+RUN wget https://downloads.haskell.org/~ghc/8.10.1/ghc-8.10.1-armv7-deb9-linux.tar.xz && \
     wget http://downloads.haskell.org/~cabal/cabal-install-3.2.0.0/cabal-install-3.2.0.0.tar.gz && \
-    tar xf ghc-8.10.1-aarch64-deb9-linux.tar.xz && tar xzf cabal-install-3.2.0.0.tar.gz && \
+    tar xf ghc-8.10.1-armv7-deb9-linux.tar.xz && tar xzf cabal-install-3.2.0.0.tar.gz && \
     rm *.gz *.xz
 WORKDIR $HASURA_ROOT/ghc-8.10.1
 RUN ./configure && make install
